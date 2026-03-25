@@ -9,11 +9,11 @@
       Title="PartnersListPage">
 
     <Grid>
-        <ListView x:Name="PartnersLW">
+        <ListView x:Name="PartnersLW" FontSize="20">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1">
-                        <Grid>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                        <Grid Margin="10" Width="700">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
@@ -27,7 +27,7 @@
                             <StackPanel Grid.Row="0" Orientation="Horizontal">
                                 <TextBlock Text="{Binding TypeOfBusiness.NameBusiness}"/>
                                 <TextBlock Text=" | "/>
-                                <TextBlock Text="{Binding NamePartners}"/>
+                                <TextBlock Text="{Binding NamePartner}"/>
                             </StackPanel>
                             <StackPanel Grid.Row="1" Orientation="Horizontal">
                                 <TextBlock Text="{Binding SurnameDirector}"/>
