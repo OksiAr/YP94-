@@ -9,6 +9,10 @@
       Title="PartnersListPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
         <ListView x:Name="PartnersLW" FontSize="20">
             <ListView.ItemTemplate> 
                 <DataTemplate>
@@ -36,10 +40,16 @@
                             </StackPanel>
                             <TextBlock Grid.Row="2" Text="{Binding Phone}"/>
                             <TextBlock Grid.Row="3" Text="{Binding Raiting}"/>
+
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SizeDiscount}"  HorizontalAlignment="Right"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="AddBtn" Click="AddBtn_Click">Добавить</Button>
+            <Button x:Name="EditBtn" Click="EditBtn_Click">Изменить</Button> 
+        </StackPanel>
     </Grid>
 </Page>

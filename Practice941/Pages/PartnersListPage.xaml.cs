@@ -26,5 +26,24 @@ namespace Test942.Pages
             InitializeComponent();
             PartnersLW.ItemsSource = ConnectionClass.comfortEntities.Partners.ToList();
         }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var selPartner = PartnersLW.SelectedItem as Partners;
+            if (selPartner != null)
+            {
+                NavigationService.Navigate(new PartnersAddEditPage(selPartner));
+            }
+            else
+            {
+                MessageBox.Show("Не выбран партнер для редактирования!");
+            }
+               
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PartnersAddEditPage(new Partners()));
+        }
     }
 }

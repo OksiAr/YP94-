@@ -160,6 +160,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PartnersAddEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PartnersListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +205,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\PartialClases\Partners.cs" />
     <Compile Include="Model\Partners.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -251,6 +256,9 @@
     </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PartnersAddEditPage.xaml.cs">
+      <DependentUpon>PartnersAddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PartnersListPage.xaml.cs">
       <DependentUpon>PartnersListPage.xaml</DependentUpon>
