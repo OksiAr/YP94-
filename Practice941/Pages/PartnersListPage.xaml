@@ -10,7 +10,7 @@
 
     <Grid>
         <ListView x:Name="PartnersLW" FontSize="20">
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate> 
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1" Margin="10">
                         <Grid Margin="10" Width="700">
