@@ -1,0 +1,45 @@
+﻿<Page x:Class="Test942.Pages.PartnersListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Test942.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PartnersListPage">
+
+    <Grid>
+        <ListView x:Name="PartnersLW">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="{Binding TypeOfBusiness.NameBusiness}"/>
+                                <TextBlock Text=" | "/>
+                                <TextBlock Text="{Binding NamePartners}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="{Binding SurnameDirector}"/>
+                                <TextBlock Text="{Binding NameDirector}"/>
+                                <TextBlock Text="{Binding PatronumicDirector}"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="2" Text="{Binding Phone}"/>
+                            <TextBlock Grid.Row="3" Text="{Binding Raiting}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
